@@ -91,6 +91,21 @@ function App() {
   useEffect(() => {
     if (!booted) return;
 
+    const handleContextMenu = (e: MouseEvent) => e.preventDefault();
+    const handleCopy = (e: ClipboardEvent) => e.preventDefault();
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('copy', handleCopy);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('copy', handleCopy);
+    };
+  }, [booted]);
+
+  useEffect(() => {
+    if (!booted) return;
+
     const othersHidden = windows.filter(w => w.id !== 'curiosity').every(w => !w.isOpen || w.isMinimized);
     const curiosity = windows.find(w => w.id === 'curiosity');
 
