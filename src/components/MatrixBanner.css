@@ -1,0 +1,19 @@
+.matrix-banner-text {
+  font-family: var(--font-mono);
+  font-size: 3.5rem; /* Huge impact */
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 40px #00ff41;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .matrix-banner-text {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+}

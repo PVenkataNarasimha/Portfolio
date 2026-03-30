@@ -1,0 +1,98 @@
+.menubar-dropdown {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  min-width: 220px;
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+  z-index: 10000;
+  animation: menuFadeIn 0.2s ease;
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-dropdown-item {
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #fff;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.1s;
+}
+
+.menu-dropdown-item:hover {
+  background: #00ff41;
+  color: #030a05;
+}
+
+.menu-dropdown-item.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.menu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 6px 0;
+}
+
+.menu-shortcut {
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+.menubar-right .menubar-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.menubar-right .menubar-icon:hover {
+  opacity: 0.7;
+}
+
+.system-status-popup {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  width: 320px;
+  background: rgba(25, 25, 25, 0.9);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  z-index: 10001;
+}
+
+.status-header {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #00ff41;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #a4cead;
+}
+
+.status-val {
+  color: #fff;
+}
